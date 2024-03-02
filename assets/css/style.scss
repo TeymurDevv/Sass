@@ -1,0 +1,69 @@
+@import "./colors/color.scss";
+@import "./extends/extendsParts.scss";
+@import "./sizes/fontAndSizes.scss";
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+nav {
+    background-color: $bsdarkrgb;
+    ul{
+      @extend %flex;
+      gap: $size;
+      li,a{
+        font-size: $size;
+        margin-top: 5px;
+        color: $bs-navbar-color;
+      }
+    }
+}
+}
+#first{
+    background-color: $bsdarkrgb;
+    height: 77vh;
+
+}
+#second{
+  
+  .icons{
+    height: 3rem;
+    width: 3rem;
+    font-size: 1.5rem;
+    i{
+      padding-top: 12px;
+    }
+    }
+}
+// Responsive font sizes
+body {
+  font-size: $size; // Default
+
+  @media (max-width: 768px) { // Tablets and below
+    font-size: $size2;
+ 
+  }
+
+  @media (max-width: 576px) { // Phones
+    font-size: $size3;
+    .imagePart img{
+      visibility: hidden;
+    }
+   
+  }
+}
+
+// Adjusting navbar padding for smaller screens
+nav {
+  padding: 1rem 0;
+
+  @media (max-width: 768px) {
+    padding: 0.5rem 0;
+  }
+}
+
+main {
+  width: 100%; /* Ensure the main tag spans the full width */
+  overflow: hidden; /* Prevents horizontal scrolling caused by overflow */
+}
